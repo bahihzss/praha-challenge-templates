@@ -13,10 +13,8 @@ describe("functions", (): void => {
       expect(sumOfArray([1, 1, 1])).toBe(3);
     });
 
-    test("空の配列を渡すとエラーになる", (): void => {
-      expect((): void => {
-        sumOfArray([]);
-      }).toThrow("Reduce of empty array with no initial value");
+    test("空の配列を渡すと 0 が返ってくる", (): void => {
+      expect(sumOfArray([])).toBe(0);
     });
   });
 
@@ -25,14 +23,8 @@ describe("functions", (): void => {
       expect(await asyncSumOfArray([1, 1, 1])).toBe(3);
     });
 
-    test("空の配列を渡すとエラーになる", async (): Promise<void> => {
-      const throwFn = async (): Promise<void> => {
-        await asyncSumOfArray([]);
-      };
-
-      await expect(throwFn).rejects.toThrow(
-        "Reduce of empty array with no initial value"
-      );
+    test("空の配列を渡すと 0 が返ってくる", async (): Promise<void> => {
+      expect(await asyncSumOfArray([])).toBe(0);
     });
   });
 

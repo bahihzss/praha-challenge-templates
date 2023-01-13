@@ -1,7 +1,7 @@
 export const getFuture = (): Date => {
   const additionalTime = Math.floor(Math.random() * 1000);
 
-  return new Date(new Date().getDate() + additionalTime);
+  return new Date(new Date().getTime() + additionalTime);
 };
 
 export const sleep = (timeout: number): Promise<void> => {

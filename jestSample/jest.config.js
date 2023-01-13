@@ -5,6 +5,7 @@ module.exports = {
   collectCoverageFrom: [
     "**/functions.ts",
     "**/nameApiService.ts",
+    "**/quiz.ts",
     "**/tasks/**.ts",
   ],
 };

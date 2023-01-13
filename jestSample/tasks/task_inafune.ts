@@ -43,7 +43,8 @@ export const fetchUserName = async (
   apiService: ApiService
 ): Promise<string> => {
   try {
-    return apiService.fetchUserName(userId);
+    const username = await apiService.fetchUserName(userId);
+    return username;
   } catch (error) {
     return "";
   }
